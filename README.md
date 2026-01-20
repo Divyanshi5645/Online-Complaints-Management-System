@@ -70,7 +70,7 @@ npm run dev
 To access the Admin Dashboard at `/admin`, use the default credentials (or check `seedAdmin.js`):
 
 - **Username**: `admin`
-- **Password**: `Siddharat24` (or your updated password)
+- **Password**: *(Configured during setup / Ask Administrator)*
 
 ## 🤝 Contribution
 
