@@ -1,3 +1,4 @@
+// Online Complaints Management System - Server Entry
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
