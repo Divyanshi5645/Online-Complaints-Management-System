@@ -81,14 +81,27 @@ const Dashboard = () => {
 
     return (
         <div className="container mt-4">
-            <motion.h2
-                initial={{ x: -20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                className="mb-4 fw-bold text-white"
-                style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}
-            >
-                <FaClipboardList className="me-2" /> Admin Dashboard
-            </motion.h2>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+                <motion.h2
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    className="mb-0 fw-bold text-white"
+                    style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}
+                >
+                    <FaClipboardList className="me-2" /> Admin Dashboard
+                </motion.h2>
+                <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                        localStorage.removeItem('token');
+                        window.location.href = '/login';
+                    }}
+                    className="btn btn-danger shadow-sm border-0 px-4"
+                >
+                    Logout
+                </motion.button>
+            </div>
 
             {/* Summary Cards */}
             <motion.div
