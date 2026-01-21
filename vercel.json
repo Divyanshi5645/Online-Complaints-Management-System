@@ -19,8 +19,23 @@
             "destination": "/api/index.js"
         },
         {
-            "source": "/(.*)",
-            "destination": "/index.html"
+            "source": "/((?!api/).*)",
+            "destination": "/client/$1"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/index.js"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/client/$1",
+            "check": true
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/client/index.html"
         }
     ]
 }
